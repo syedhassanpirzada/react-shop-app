@@ -6,14 +6,14 @@ import Axios from 'axios';
 const { Title } = Typography;
 const { TextArea } = Input;
 
-const Continents = [
-    { key: 1, value: "Africa" },
-    { key: 2, value: "Europe" },
-    { key: 3, value: "Asia" },
-    { key: 4, value: "North America" },
-    { key: 5, value: "South America" },
-    { key: 6, value: "Australia" },
-    { key: 7, value: "Antarctica" }
+const Category = [
+    { key: 1, value: "Rice" },
+    { key: 2, value: "Italian" },
+    { key: 3, value: "Pakistani" },
+    { key: 4, value: "Chinese" },
+    { key: 5, value: "Burgers & Wraps" },
+    { key: 6, value: "Barbeque" },
+    { key: 7, value: "Thai" }
 ]
 
 function UploadProductPage(props) {
@@ -78,7 +78,7 @@ function UploadProductPage(props) {
     return (
         <div style={{ maxWidth: '700px', margin: '2rem auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <Title level={2}> Upload Travel Product</Title>
+                <Title level={2}> Upload Dish</Title>
             </div>
 
 
@@ -103,7 +103,7 @@ function UploadProductPage(props) {
                 />
                 <br />
                 <br />
-                <label>Price($)</label>
+                <label>Price(Rs)</label>
                 <Input
                     onChange={onPriceChange}
                     value={PriceValue}
@@ -111,7 +111,7 @@ function UploadProductPage(props) {
                 />
                 <br /><br />
                 <select onChange={onContinentsSelectChange} value={ContinentValue}>
-                    {Continents.map(item => (
+                    {Category.map(item => (
                         <option key={item.key} value={item.key}>{item.value} </option>
                     ))}
                 </select>
