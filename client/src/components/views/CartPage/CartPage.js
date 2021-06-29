@@ -93,7 +93,7 @@ function CartPage(props) {
 
                 {ShowTotal ?
                     <div style={{ marginTop: '3rem' }}>
-                        <h2>Total amount: Rs{Total} </h2>
+                        <h2>Total amount: Rs {Total} </h2>
                     </div>
                     :
                     ShowSuccess ?
@@ -115,9 +115,7 @@ function CartPage(props) {
 
 
 
-            {/* Paypal Button */}
-
-            {/* {ShowTotal &&
+             {ShowTotal &&
 
                 <Paypal
                     toPay={Total}
@@ -126,7 +124,7 @@ function CartPage(props) {
                     transactionCanceled={transactionCanceled}
                 />
 
-            } */}
+            } 
 
 
 
